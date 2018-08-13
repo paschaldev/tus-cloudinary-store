@@ -1,0 +1,38 @@
+{
+  "name": "tus-cloudinary-store",
+  "version": "0.0.1",
+  "description": "A CLoudinary Store implementation for tus resumable upload protocol",
+  "main": "./lib/index.js",
+  "scripts": {
+    "test": "mocha",
+    "dev": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paschaldev/tus-cloudinary-store.git"
+  },
+  "keywords": [
+    "tus",
+    "cloudinary",
+    "resumable",
+    "upload"
+  ],
+  "author": "Ezeugwu Paschal <ezeugwupaschal@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/paschaldev/tus-cloudinary-store/issues"
+  },
+  "homepage": "https://github.com/paschaldev/tus-cloudinary-store#readme",
+  "dependencies": {
+    "cloudinary": "^1.11.0",
+    "tus-node-server": "^0.3.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0-rc.1",
+    "@babel/preset-env": "^7.0.0-rc.1",
+    "chai": "^4.1.2",
+    "eslint": "^5.3.0",
+    "mocha": "^5.2.0",
+    "sinon": "^6.1.5"
+  }
+}
