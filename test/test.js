@@ -1,6 +1,8 @@
 var assert = require('assert');
+const sinon = require('sinon');
 const Server = require('tus-node-server/lib/Server');
 var expect = require('chai').expect
+var should = require('chai').should()
 
 const STORE_PATH = '/files';
 
@@ -19,11 +21,22 @@ describe('Cloudinary DataStore', function () {
         });
     });
 
-    describe('constructor', () => {
+    describe('constlkhkructor', () => {
 
         it('should be an instance of DataStore', function () {
-            //expect(new CloudinaryStore({ path: '/'})).to.be.an.instanceof(DataStore);
             assert.equal(server.datastore instanceof DataStore, true);
+        });
+
+        it('must have a create method', () => {
+            expect(server.datastore).to.have.own.property('create');
+        });
+    
+        it('must have a write method', () => {
+            expect(server.datastore).to.have.own.property('write');
+        });
+    
+        it('must have a getOffset method', () => {
+            server.datastore.should.have.own.property('getOffset');
         });
     });
 });
